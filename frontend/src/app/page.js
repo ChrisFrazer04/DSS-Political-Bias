@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 //import styles from "./page.module.css";
-import ArticleBox from "./text_box";
+import ArticleBox from "./components/text_box";
 
 export default function Home() {
   return (
