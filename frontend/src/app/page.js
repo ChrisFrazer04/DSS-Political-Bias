@@ -15,7 +15,7 @@ export default function Home() {
             <button id="highlightWords">Highlight Bias Words</button>
         </div>
         
-        <div class="results">
+        <div className="results">
             <h2>Results:</h2>
             <p><strong>Leans:</strong> <span id="biasLeaning">N/A</span></p>
             <p><strong>Accuracy/Confidence:</strong> <span id="confidence">N/A</span></p>
