@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from flask_cors import cross_origin
 import numpy
 import spacy
 import re
@@ -12,6 +13,7 @@ CORS(app)  # Enable CORS for all routes
 nlp = spacy.load("en_core_web_sm")
 
 @app.route('/api/article', methods=['POST'])
+@cross_origin()
 def scrape_article():
     print(request.json)
     url = request.json
