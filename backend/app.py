@@ -8,11 +8,11 @@ from article_processing import filter_text, scrape_url
 
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 nlp = spacy.load("en_core_web_sm")
 
-@app.route('/api/article', methods=['POST'])
+@app.route('/api/article', methods=['POST', 'OPTIONS'])
 @cross_origin()
 def scrape_article():
     print(request.json)
