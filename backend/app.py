@@ -8,11 +8,11 @@ from article_processing import filter_text, scrape_url
 
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, origins=["http://localhost:3000", "https://dss-bias.vercel.app/"])
 
 nlp = spacy.load("en_core_web_sm")
 
-@app.route('/api/article', methods=['POST', 'OPTIONS'])
+@app.route('/api/article', methods=['POST'])
 @cross_origin()
 def scrape_article():
     print(request.json)
