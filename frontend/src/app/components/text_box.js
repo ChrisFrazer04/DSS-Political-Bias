@@ -17,8 +17,11 @@ function ArticleBox() {
   }
 
   const sendData = (data) => {
-    fetch('http://dss-political-bias-production.up.railway.app/api/article', {
+    fetch('https://dss-political-bias-production.up.railway.app/api/article', {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify(data)
     })
       .then(response => response.json())
