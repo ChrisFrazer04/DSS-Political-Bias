@@ -1,5 +1,7 @@
 Node.js download: https://nodejs.org/en/download
 
+Railway server URL: dss-political-bias-production.up.railway.app
+
 Installation steps:
   1. Download node.js from the node above
   2. run "sudo npm install -g pnpm"

@@ -2,6 +2,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 import spacy
+import numpy as np
 
 def filter_text(text: str, nlp):
     text = re.sub(r'\n\s*\n', '\n', text)  # Remove excess blank lines

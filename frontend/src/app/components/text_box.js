@@ -17,7 +17,7 @@ function ArticleBox() {
   }
 
   const sendData = (data) => {
-    fetch('http://127.0.0.1:5000/api/article', {
+    fetch('https://dss-political-bias-production.up.railway.app/api/article', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
